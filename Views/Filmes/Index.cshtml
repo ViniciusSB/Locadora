@@ -1,0 +1,87 @@
+﻿@model IEnumerable<SistemaLocadora.Models.Filme>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nome")
+        </th>
+        <th>
+            @Html.DisplayName("Data de lançamento")
+        </th>
+        <th>
+            @Html.DisplayName("Classificação Indicativa")
+        </th>
+        <th>
+            @Html.DisplayName("Gênero")
+        </th>
+        <th>
+            @Html.DisplayName("Sinopse")
+        </th>
+        <th>
+            @Html.DisplayName("Tipo")
+        </th>
+        <th>
+            @Html.DisplayName("Valor")
+        </th>
+        <th>
+            @Html.DisplayName("Quantidade total")
+        </th>
+        <th>
+            @Html.DisplayName("Quantidade disponível")
+        </th>
+        <th>
+            @Html.DisplayName("Duração")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataLancamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.classificacaoIndicativa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sinopse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantidadeTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantidadeDisponivel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duracao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

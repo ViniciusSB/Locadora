@@ -1,0 +1,106 @@
+﻿@model SistemaLocadora.Models.Jogo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Jogo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataLancamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataLancamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classificacaoIndicativa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classificacaoIndicativa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sinopse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sinopse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantidadeTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantidadeTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantidadeDisponivel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantidadeDisponivel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plataforma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plataforma)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.publicadora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publicadora)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

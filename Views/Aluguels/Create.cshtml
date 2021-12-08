@@ -1,0 +1,54 @@
+﻿@model SistemaLocadora.Models.AluguelxPedidoxFuncxCliente
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Aluguel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <!--
+    <div class="form-group">
+        <h2>Pedidos</h2>
+        @foreach (var item in Model.pedidos)
+        {
+            <input name="AreChecked" type="checkbox" value="@item.id" /> @item.quantidadeDias<br />
+        }
+    </div>
+        -->
+
+    <h2>Cliente</h2>
+
+    <div class="form-group" style="margin-left:85px">
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.pedido.id, ViewBag.Pedidos as SelectList,
+                       "Selecione um pedido para continuar", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.pedido.id, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Gerar dados" class="btn btn-default" />
+        </div>
+    </div>
+
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

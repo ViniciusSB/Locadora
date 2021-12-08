@@ -1,0 +1,66 @@
+﻿@model SistemaLocadora.Models.Aluguel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Aluguel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idFuncionario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idFuncionario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valorTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valorTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataEntrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataEntrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataLimiteEntrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataLimiteEntrega)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

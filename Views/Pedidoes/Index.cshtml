@@ -1,0 +1,40 @@
+﻿@model SistemaLocadora.Models.PessoaxPedidoxProduto
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Cliente")
+        </th>
+        <th>
+            @Html.DisplayName("Quantidade de itens")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.pedidoClienteQuantidades)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cliente.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantidadeProdutos)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.pedido.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.pedido.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.pedido.id })
+            </td>
+        </tr>
+    }
+
+</table>
